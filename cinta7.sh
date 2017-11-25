@@ -79,18 +79,22 @@ apt-file update
 vnstat -u -i $ether
 service vnstat restart
 
-
 #text gambar
 apt-get install boxes
 
-# text pelangi
-sudo apt-get install ruby
-sudo gem install lolcat
 
-# text warna
+# text gambar
+apt-get install boxes
+
+# color text
 cd
 rm -rf /root/.bashrc
-wget -O /root/.bashrc $source/.bashrc
+wget -O /root/.bashrc "https://raw.githubusercontent.com/fluxo7/m.e.n.u/master/method1/.bashrc"
+
+# install lolcat
+sudo apt-get -y install ruby
+sudo gem install lolcat
+
 
 # install webserver
 cd
