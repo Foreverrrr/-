@@ -13,7 +13,7 @@ vps="aneka";
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/elangoverdosis2/cinta"
+	source="https://raw.githubusercontent.com/Foreverrrr/-/master"
 #fi
 
 # go to root
@@ -40,7 +40,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 service ssh restart
 
 # set repo
-wget -O /etc/apt/sources.list $source/debian7/sources.list.debian7
+wget -O /etc/apt/sources.list $source/sources.list.debian7
 wget http://www.dotdeb.org/dotdeb.gpg
 wget http://www.webmin.com/jcameron-key.asc
 cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
@@ -90,7 +90,7 @@ sudo gem install lolcat
 # text warna
 cd
 rm -rf /root/.bashrc
-wget -O /root/.bashrc $source/debian7/.bashrc
+wget -O /root/.bashrc $source/.bashrc
 
 # install webserver
 cd
@@ -126,8 +126,8 @@ cd
 
 # install mrtg
 #apt-get update;apt-get -y install snmpd;
-#wget -O /etc/snmp/snmpd.conf $source/debian7/snmpd.conf
-#wget -O /root/mrtg-mem.sh $source/debian7/mrtg-mem.sh
+#wget -O /etc/snmp/snmpd.conf $source/snmpd.conf
+#wget -O /root/mrtg-mem.sh $source/mrtg-mem.sh
 #chmod +x /root/mrtg-mem.sh
 #cd /etc/snmp/
 #sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
@@ -215,7 +215,7 @@ cd
 #if [[ $ether = "eth0" ]]; then
 #	wget -O /etc/iptables.conf $source/iptables.up.rules.eth0
 #else
-#	wget -O /etc/iptables.conf $source/Debian7/iptables.up.rules.venet0
+#	wget -O /etc/iptables.conf $source/iptables.up.rules.venet0
 #fi
 
 #sed -i $MYIP2 /etc/iptables.conf;
